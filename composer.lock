@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e9a8339d51c94a365c1193414479294f",
-    "content-hash": "0feb6af5bef0e094e776fba476c27e7c",
+    "hash": "879abf24a31ae4fba4555113ca64f637",
+    "content-hash": "8f5f08e5a5f7f80e57b1b93fe9ac5e46",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -571,6 +571,16 @@
                 "storage"
             ],
             "time": "2016-06-03 19:11:39"
+        },
+        {
+            "name": "modified-laravel",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jnethery/framework.git",
+                "reference": "5.2"
+            },
+            "type": "library"
         },
         {
             "name": "monolog/monolog",
