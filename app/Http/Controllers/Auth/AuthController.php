@@ -73,6 +73,7 @@ class AuthController extends Controller
         
     function _login(Request $request)
     {
+        $this->username = 'name';
         return $this->login($request);
     }
 }

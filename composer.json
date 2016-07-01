@@ -4,22 +4,9 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
-    "repositories": [
-    {
-        "type": "package",
-        "package": {
-            "name": "modified-laravel",
-            "version": "1.0",
-            "source": {
-                "url": "https://github.com/jnethery/framework.git",
-                "type": "git",
-                "reference": "5.2"
-            }
-        }
-    }],
     "require": {
         "php": ">=5.5.9",
-        "modified-laravel": "1.0",
+        "laravel/framework": "5.2.*",
         "laravelcollective/html": "5.2.*"
     },
     "require-dev": {
