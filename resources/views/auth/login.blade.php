@@ -21,6 +21,11 @@
                 <label for="pass">Password</label>
                 <input type="password" class="form-control" name="password" id="pass" v-model="pass" />
             </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="remember" id="remember" /> Remember Me
+                </label>
+            </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Login</button>
             </div>
