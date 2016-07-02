@@ -12,20 +12,20 @@ use Illuminate\Support\Facades\URL;
 class UserController extends Controller
 {
     function getInventory($id) {
-        $itemsSQL = Item::all();
+        $id = Helper::decode($id);
+        $itemDB = new Item;
+        $userItems = $itemDB->getUserItems($id);
         $item = array();
         $items = array();
-        $count = 0;
-        foreach ($itemsSQL as $item) {
+        foreach ($userItems as $userItem) {
             $item = array(
-                'name' => $item->name,
-                'description' => $item->description,
-                'img' => $item->img,
+                'name' => $userItem->name,
+                'description' => $userItem->description,
+                'img' => $userItem->img,
             );
-            $count++;
-        }
-        for ($i = 0; $i < $count; $i++) {
-            $items []= $item;
+            for ($i = 0; $i < $userItem->count; $i++) {
+                $items []= $item;
+            }
         }
         return view('user.inventory', ['items' => $items]);
     }

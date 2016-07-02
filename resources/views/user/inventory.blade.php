@@ -2,5 +2,9 @@
 @section('title', 'Inventory')
 
 @section('main')
-@include('layouts.table', ['items' => $items])
+@if (count($items) == 0)
+    Oh no! Your inventory is empty! :(
+@else
+    @include('layouts.table', ['items' => $items])
+@endif
 @endsection

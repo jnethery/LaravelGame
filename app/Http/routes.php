@@ -20,6 +20,6 @@ Route::group(['prefix' => 'auth', 'as' => 'auth::'], function() {
 });
 
 // User functions
-Route::group(['prefix' => 'user', 'as' => 'user::'], function() {
+Route::group(['prefix' => 'user', 'as' => 'user::', 'middleware' => 'auth'], function() {
     Route::get('{id}/inventory', 'User\UserController@getInventory')->where('id', '[A-Za-z]+');
 });
