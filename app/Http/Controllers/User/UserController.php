@@ -15,14 +15,16 @@ class UserController extends Controller
         $itemsSQL = Item::all();
         $item = array();
         $items = array();
+        $count = 0;
         foreach ($itemsSQL as $item) {
             $item = array(
                 'name' => $item->name,
                 'description' => $item->description,
                 'img' => $item->img,
             );
+            $count++;
         }
-        for ($i = 0; $i < 20; $i++) {
+        for ($i = 0; $i < $count; $i++) {
             $items []= $item;
         }
         return view('user.inventory', ['items' => $items]);
