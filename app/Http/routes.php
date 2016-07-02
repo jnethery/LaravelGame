@@ -18,3 +18,8 @@ Route::group(['prefix' => 'auth', 'as' => 'auth::'], function() {
         return redirect()->route('home');
     });
 });
+
+// User functions
+Route::group(['prefix' => 'user', 'as' => 'user::'], function() {
+    Route::get('{id}/inventory', 'User\UserController@getInventory')->where('id', '[A-Za-z]+');
+});

@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('title', 'Welcome!')
 
-@section('content')
-    Test?
+@section('main')
+This is the welcome page
 @endsection

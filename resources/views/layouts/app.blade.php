@@ -22,7 +22,7 @@
     <style>
         body {
             font-family: 'Lato';
-            padding-top: 70px;
+            margin-top: 70px;
         }
         .fa-btn {
             margin-right: 6px;
@@ -39,14 +39,14 @@
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
                     <li>
-                        <a href="#">{{ Auth::user()->name }}</a>
+                        <a href="/user/{{App\Helpers\Helper::encode(Auth::user()->id)}}/inventory/">{{ Auth::user()->name }}</a>
                     </li>
                     <li>
                         <a href="#">GP : 100</a>
                     </li>
                     @else 
                     <li>
-                        <a href="#">Guest</a>
+                        <a href="/auth/register">Guest</a>
                     </li>
                     @endif
                     <li>

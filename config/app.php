@@ -171,7 +171,7 @@ return [
     | the aliases are "lazy" loaded so they don't hinder performance.
     |
     */
-
+    
     'aliases' => [
 
         'App' => Illuminate\Support\Facades\App::class,
@@ -189,6 +189,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Gate' => Illuminate\Support\Facades\Gate::class,
         'Hash' => Illuminate\Support\Facades\Hash::class,
+        'Helper' => 'App\Helpers\Helper::class',
         'Html' => Collective\Html\HtmlFacade::class,
         'Lang' => Illuminate\Support\Facades\Lang::class,
         'Log' => Illuminate\Support\Facades\Log::class,
